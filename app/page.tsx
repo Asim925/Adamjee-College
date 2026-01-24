@@ -80,7 +80,6 @@ export default function HomePage() {
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-24 lg:py-32">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
           <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
             <div data-aos="fade-up" className="mx-auto max-w-3xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
