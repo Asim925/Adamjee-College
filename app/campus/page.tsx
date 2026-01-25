@@ -12,6 +12,7 @@ import {
   Calculator,
 } from "lucide-react";
 import Image from "next/image";
+import VideoPlayer from "@/components/VIdeoPlayer";
 
 const facilities = [
   {
@@ -190,46 +191,33 @@ export default function CampusPage() {
           </div>
         </section>
 
-        {/* Laboratories */}
-        <section className="border-y border-border bg-muted/50 py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
+        {/* Video Tour */}
+        <section className="border-t border-border bg-secondary py-16 px-8 lg:py-24">
+          <div
+            data-aos="fade-up"
+            className="max-w-7xl px-4 lg:px-8 mx-auto flex justify-center items-center gap-10"
+          >
+            <VideoPlayer />
+            <div className="max-sm:hidden">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
-                Practical Learning
+                Instruction
               </p>
               <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Science Laboratories
+                Campus Video
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Well-equipped laboratories for practical science education and
-                experiments.
+              <p className="my-4 text-lg text-muted-foreground">
+                Take a virtual tour of Adamjee Government Science College to see
+                our state-of-the-art facilities and vibrant learning
+                environment. The assembly ground, buildings, and laboratories
+                are designed to foster academic excellence and student growth.
               </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {facilities.map((facility) => (
-                <Card key={facility.title} className="text-center">
-                  <CardHeader>
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                      <facility.icon className="h-7 w-7 text-primary" />
-                    </div>
-                    <CardTitle className="mt-4 text-lg">
-                      {facility.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      {facility.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+              <p className="font-light">Credit: AGSCS</p>
             </div>
           </div>
         </section>
 
         {/* Classrooms */}
-        <section className="py-16 lg:py-24">
+        <section className="py-16 lg:py-24 bg-muted/50">
           <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
@@ -274,6 +262,44 @@ export default function CampusPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Laboratories */}
+        <section className="border-y border-border  py-16 lg:py-24">
+          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-medium uppercase tracking-widest text-accent">
+                Practical Learning
+              </p>
+              <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Science Laboratories
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Well-equipped laboratories for practical science education and
+                experiments.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {facilities.map((facility) => (
+                <Card key={facility.title} className="text-center">
+                  <CardHeader>
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                      <facility.icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <CardTitle className="mt-4 text-lg">
+                      {facility.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      {facility.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>

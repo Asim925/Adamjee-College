@@ -19,8 +19,13 @@ import {
   FlaskConical,
   Calculator,
   Monitor,
+  Mail,
+  Phone,
+  UsersRound,
+  Instagram,
+  Facebook,
+  Linkedin,
 } from "lucide-react";
-import Contacts from "@/components/Contacts";
 
 const stats = [
   { label: "Students per year", value: "2,400+", icon: Users },
@@ -36,6 +41,7 @@ const departments = [
       "Comprehensive preparation for medical and healthcare careers with focus on Biology, Chemistry, and Physics.",
     icon: FlaskConical,
     href: "/academics/pre-medical",
+    cutoff: "SECCAP cutoff marks: 485 - 88.18%",
   },
   {
     title: "Pre-Engineering",
@@ -43,6 +49,7 @@ const departments = [
       "Strong foundation in Mathematics and Physics for aspiring engineers and technical professionals.",
     icon: Calculator,
     href: "/academics/pre-engineering",
+    cutoff: "SECCAP cutoff marks: 468	- 85.09%",
   },
   {
     title: "Computer Science",
@@ -50,6 +57,7 @@ const departments = [
       "Modern computing education preparing students for the digital economy and technology sector.",
     icon: Monitor,
     href: "/academics/computer-science",
+    cutoff: "SECCAP cutoff marks: 481 -	87.45%",
   },
 ];
 
@@ -76,7 +84,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
-      <Contacts />
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-24 lg:py-32">
@@ -224,8 +231,19 @@ export default function HomePage() {
                 <Link key={dept.title} href={dept.href}>
                   <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
                     <CardHeader>
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                        <dept.icon className="h-6 w-6 text-primary" />
+                      <div className="flex justify-between items-center">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                          <dept.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <p
+                          className={
+                            dept.title == "Pre-Medical"
+                              ? "visible text-4xl"
+                              : "hidden"
+                          }
+                        >
+                          🎓
+                        </p>
                       </div>
                       <CardTitle className="mt-4 font-serif">
                         {dept.title}
@@ -241,6 +259,7 @@ export default function HomePage() {
                       </div>
                     </CardContent>
                   </Card>
+                  <p className="text-center font-bold mt-5">{dept.cutoff}</p>
                 </Link>
               ))}
             </div>
@@ -345,29 +364,73 @@ export default function HomePage() {
           <div data-aos="zoom-in" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
-                Our Campus
+                details
               </p>
               <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground">
-                Learning Environment
+                Contact Us
               </h2>
             </div>
             <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
               {[
-                "Well-equipped science laboratories designed to support hands-on practical learning",
-                "Modern classrooms with adequate facilities for a comfortable and effective learning environment",
-                "A fully resourced library offering a wide range of academic and reference materials",
-                "A spacious auditorium used for academic events, seminars, and guest lectures",
-              ].map((caption, index) => (
+                {
+                  icon: <Mail className="mx-auto h-8 w-8 text-primary/70" />,
+                  tag: "Email",
+                  value: "agsckarachi@gmail.com",
+                },
+                {
+                  icon: <Phone className="mx-auto h-8 w-8 text-primary/70" />,
+                  tag: "Phone",
+                  value: "02199215689    +92-333-23881241",
+                },
+                {
+                  icon: <MapPin className="mx-auto h-8 w-8 text-primary/70" />,
+                  tag: "Location",
+                  value:
+                    "V2JP+PGJ, Business Recorder Road, Soldier Bazaar, Garden East, Karachi",
+                },
+                {
+                  icon: (
+                    <UsersRound className="mx-auto h-8 w-8 text-primary/70" />
+                  ),
+                  tag: "Social Accounts",
+                  value: (
+                    <div className="flex justify-center space-x-4">
+                      <Link
+                        href="https://www.facebook.com/agsckarachii"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Facebook className="h-6 w-6 text-primary/70 hover:text-primary" />
+                      </Link>
+                      <Link
+                        href="https://www.instagram.com/agsckarachi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Instagram className="h-6 w-6 text-primary/70 hover:text-primary" />
+                      </Link>
+                      <Link
+                        href="https://www.linkedin.com/company/adamjee-govt-science-college-karachi/?originalSubdomain=pk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Linkedin className="h-6 w-6 text-primary/70 hover:text-primary" />
+                      </Link>
+                    </div>
+                  ),
+                },
+              ].map((card, index) => (
                 <div
                   key={index}
                   className="group relative overflow-hidden rounded-lg bg-primary/5"
                 >
                   <div className="aspect-4/3 flex items-center justify-center p-4">
                     <div className="text-center">
-                      <Building2 className="mx-auto h-8 w-8 text-primary/70" />
-                      <p className="mt-2 text-xs text-muted-foreground">
-                        {caption}
-                      </p>
+                      {card.icon}
+                      <p className="font-bold mt-2">{card.tag}:</p>
+                      <span className="mt-2 text-lg text-muted-foreground">
+                        {card.value}
+                      </span>
                     </div>
                   </div>
                 </div>
