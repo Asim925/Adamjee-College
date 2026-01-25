@@ -380,13 +380,13 @@ export default function HomePage() {
                 {
                   icon: <Phone className="mx-auto h-8 w-8 text-primary/70" />,
                   tag: "Phone",
-                  value: "02199215689    +92-333-23881241",
+                  value: "+92 333 23881241",
                 },
                 {
                   icon: <MapPin className="mx-auto h-8 w-8 text-primary/70" />,
                   tag: "Location",
                   value:
-                    "V2JP+PGJ, Business Recorder Road, Soldier Bazaar, Garden East, Karachi",
+                    "Adamjee College, Soldier Bazaar, Garden East, Karachi",
                 },
                 {
                   icon: (
@@ -400,21 +400,21 @@ export default function HomePage() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Facebook className="h-6 w-6 text-primary/70 hover:text-primary" />
+                        <Facebook className="h-6 w-6 text-blue-700" />
                       </Link>
                       <Link
                         href="https://www.instagram.com/agsckarachi"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Instagram className="h-6 w-6 text-primary/70 hover:text-primary" />
+                        <Instagram className="h-6 w-6 text-pink-700" />
                       </Link>
                       <Link
                         href="https://www.linkedin.com/company/adamjee-govt-science-college-karachi/?originalSubdomain=pk"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Linkedin className="h-6 w-6 text-primary/70 hover:text-primary" />
+                        <Linkedin className="h-6 w-6 text-blue-500" />
                       </Link>
                     </div>
                   ),
@@ -424,11 +424,13 @@ export default function HomePage() {
                   key={index}
                   className="group relative overflow-hidden rounded-lg bg-primary/5"
                 >
-                  <div className="aspect-4/3 flex items-center justify-center p-4">
-                    <div className="text-center">
+                  <div className="aspect-4/3 flex justify-center items-center p-4">
+                    <div className="text-center flex flex-col items-center">
                       {card.icon}
-                      <p className="font-bold mt-2">{card.tag}:</p>
-                      <span className="mt-2 text-lg text-muted-foreground">
+                      <p className="font-bold text-sm md:text-md mt-2">
+                        {card.tag}:
+                      </p>
+                      <span className="mt-2 text-sm md:text-md  text-muted-foreground">
                         {card.value}
                       </span>
                     </div>
