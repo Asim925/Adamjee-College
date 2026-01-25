@@ -226,7 +226,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <div className="mt-12 grid gap-15 md:gap-8 md:grid-cols-3">
               {departments.map((dept) => (
                 <Link key={dept.title} href={dept.href}>
                   <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
