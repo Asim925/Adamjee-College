@@ -94,8 +94,8 @@ export function SiteFooter() {
         <div className="mt-12 border-t border-primary-foreground/20 pt-8">
           <p className="text-center text-xs text-primary-foreground/60">
             © 2026 | Built with{" "}
-            <span className="font-medium text-white/80">❤️ M.Asim Nazeer</span>,
-            a proud student of Adamjee Govt. Science College
+            <span className="font-medium text-white/80">M.Asim Nazeer</span>, a
+            proud student of Adamjee Govt. Science College
           </p>
         </div>
       </div>
