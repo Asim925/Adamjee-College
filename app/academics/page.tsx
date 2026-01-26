@@ -135,7 +135,7 @@ export default function AcademicsPage() {
 
         {/* Academic Structure Overview */}
         <section className="border-b border-border py-12">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-6 md:grid-cols-3">
               {academicFeatures.map((feature) => (
                 <div key={feature.title} className="flex items-start gap-4">
@@ -158,7 +158,7 @@ export default function AcademicsPage() {
 
         {/* Academic Structure */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Structure
@@ -244,7 +244,7 @@ export default function AcademicsPage() {
             <div className="mt-12 space-y-8">
               {departments.map((dept) => (
                 <Card
-                  data-aos="fade-right"
+                  data-aos="fade-up"
                   key={dept.slug}
                   className="overflow-hidden"
                 >

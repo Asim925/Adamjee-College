@@ -146,7 +146,7 @@ export default function AlumniPage() {
 
         {/* Outcomes Summary */}
         <section className="border-b border-border py-12">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-8 md:grid-cols-3">
               {outcomes.map((item) => (
                 <div key={item.label} className="text-center">
@@ -167,7 +167,7 @@ export default function AlumniPage() {
 
         {/* Higher Education Pathways */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Education
@@ -229,7 +229,7 @@ export default function AlumniPage() {
 
             <div className="mx-auto mt-12 max-w-3xl space-y-6">
               {professionalFields.map((field, index) => (
-                <Card data-aos="fade-left" key={index} className="p-6">
+                <Card data-aos="fade-up" key={index} className="p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3">
@@ -263,7 +263,7 @@ export default function AlumniPage() {
 
         {/* National Impact */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Contribution
@@ -299,7 +299,7 @@ export default function AlumniPage() {
 
         {/* Legacy Section */}
         <section className="border-t border-border bg-primary py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
                 <Globe className="h-12 w-12 text-accent" />

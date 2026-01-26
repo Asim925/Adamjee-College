@@ -41,7 +41,6 @@ const departments = [
       "Comprehensive preparation for medical and healthcare careers with focus on Biology, Chemistry, and Physics.",
     icon: FlaskConical,
     href: "/academics/pre-medical",
-    cutoff: "SECCAP cutoff marks: 485 - 88.18%",
   },
   {
     title: "Pre-Engineering",
@@ -49,7 +48,6 @@ const departments = [
       "Strong foundation in Mathematics and Physics for aspiring engineers and technical professionals.",
     icon: Calculator,
     href: "/academics/pre-engineering",
-    cutoff: "SECCAP cutoff marks: 468	- 85.09%",
   },
   {
     title: "Computer Science",
@@ -57,7 +55,6 @@ const departments = [
       "Modern computing education preparing students for the digital economy and technology sector.",
     icon: Monitor,
     href: "/academics/computer-science",
-    cutoff: "SECCAP cutoff marks: 481 -	87.45%",
   },
 ];
 
@@ -80,9 +77,30 @@ const achievements = [
   },
 ];
 
+const seccapCutoff = [
+  {
+    department: "Pre-Medical",
+    one: ["88.18%", "(485)"],
+    two: ["83.82%", "(461)"],
+    three: ["90.36%", "(497)"],
+  },
+  {
+    department: "Pre-Engineering",
+    one: ["85.64%", "(471)"],
+    two: ["85.27%", "(469)"],
+    three: ["84.55%", "(465)"],
+  },
+  {
+    department: "Computer Science",
+    one: ["84.18%", "(463)"],
+    two: ["82.91%", "(456)"],
+    three: ["80.18%", "(441)"],
+  },
+];
+
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-hidden">
       <SiteHeader />
       <main>
         {/* Hero Section */}
@@ -128,7 +146,7 @@ export default function HomePage() {
         <section className="border-b border-border bg-card py-12">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div
-              data-aos="fade-left"
+              data-aos="fade-up"
               className="grid grid-cols-2 gap-6 md:grid-cols-4"
             >
               {stats.map((stat) => (
@@ -211,7 +229,7 @@ export default function HomePage() {
 
         {/* Department Overview */}
         <section className="border-y border-border bg-muted/50 py-16 lg:py-24">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Programs
@@ -226,7 +244,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-15 md:gap-8 md:grid-cols-3">
+            <div className="mt-12 grid gap-8 md:grid-cols-3">
               {departments.map((dept) => (
                 <Link key={dept.title} href={dept.href}>
                   <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
@@ -259,16 +277,68 @@ export default function HomePage() {
                       </div>
                     </CardContent>
                   </Card>
-                  <p className="text-center font-bold mt-5">{dept.cutoff}</p>
                 </Link>
               ))}
             </div>
+          </div>
+
+          <div className="mt-10 text-center flex justify-center flex-col">
+            <p className="text-xs sm:text-sm font-medium uppercase tracking-widest text-accent">
+              see the Top fields
+            </p>
+            <h2 className="mt-2 font-serif sm:text-3xl font-bold tracking-tight text-foreground text-2xl">
+              SECCAP Cutoffs
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The following cutoff data shows the minimum qualifying marks out
+              of 550 for the last three academic years.
+            </p>
+            <table className="mt-6 mx-4 sm:w-full sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-red-600 text-white">
+                  {[
+                    "Department",
+                    new Date().getFullYear(),
+                    new Date().getFullYear() - 1,
+                    new Date().getFullYear() - 2,
+                  ].map((header, index) => (
+                    <th key={index} className="border sm:px-4 py-2">
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {seccapCutoff.map((item, index) => (
+                  <tr
+                    key={index}
+                    className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
+                  >
+                    <td className="border px-1 sm:px-4 py-2">
+                      {item.department}
+                    </td>
+                    <td className="border px-1 sm:px-4 py-2">
+                      <p>{item.one[0]}</p>
+                      <p className="text-black/50">{item.one[1]}</p>
+                    </td>
+                    <td className="border px-1 sm:px-4 py-2">
+                      <p>{item.two[0]}</p>
+                      <p className="text-black/50">{item.two[1]}</p>
+                    </td>
+                    <td className="border px-1 sm:px-4 py-2">
+                      <p>{item.three[0]}</p>
+                      <p className="text-black/50">{item.three[1]}</p>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </section>
 
         {/* Featured Achievements */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
                 <p className="text-sm font-medium uppercase tracking-widest text-accent">

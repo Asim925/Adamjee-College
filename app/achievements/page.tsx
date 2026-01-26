@@ -187,7 +187,7 @@ export default function AchievementsPage() {
 
         {/* Academic Honors */}
         <section className="border-y border-border bg-muted/50 py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Honors
@@ -317,7 +317,7 @@ export default function AchievementsPage() {
 
         {/* Call to Excellence */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <Card className="overflow-hidden">
               <div className="grid lg:grid-cols-2">
                 <div className="bg-primary p-8 lg:p-12">

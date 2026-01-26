@@ -114,7 +114,7 @@ export default function InstitutionPage() {
 
         {/* Institutional Overview */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
               <div>
                 <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -248,7 +248,7 @@ export default function InstitutionPage() {
 
                     {/* Content */}
                     <div
-                      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                      data-aos={index % 2 === 0 ? "fade-up" : "fade-up"}
                       className={`ml-12 md:ml-0 md:w-1/2 ${
                         index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
                       }`}

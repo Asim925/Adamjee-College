@@ -133,7 +133,7 @@ export default function CampusPage() {
 
         {/* Campus Overview */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
               <div>
                 <p className="text-sm font-medium uppercase tracking-widest text-accent">
@@ -218,7 +218,7 @@ export default function CampusPage() {
 
         {/* Classrooms */}
         <section className="py-16 lg:py-24 bg-muted/50">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
                 <p className="text-sm font-medium uppercase tracking-widest text-accent">
@@ -268,7 +268,7 @@ export default function CampusPage() {
 
         {/* Laboratories */}
         <section className="border-y border-border  py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Practical Learning
@@ -306,7 +306,7 @@ export default function CampusPage() {
 
         {/* Learning Environment */}
         <section className="border-t border-border bg-muted/30 py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Resources
@@ -344,7 +344,7 @@ export default function CampusPage() {
 
         {/* Campus Culture */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Character building society

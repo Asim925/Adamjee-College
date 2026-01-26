@@ -126,7 +126,7 @@ export default function ExcellencePage() {
 
         {/* Result Highlights */}
         <section className="border-b border-border py-12">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-8 md:grid-cols-3">
               {resultHighlights.map((item) => (
                 <div key={item.label} className="text-center">
@@ -147,7 +147,7 @@ export default function ExcellencePage() {
 
         {/* Board Result Highlights */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 BIEK Results
@@ -200,7 +200,7 @@ export default function ExcellencePage() {
 
         {/* Merit Positions */}
         <section className="border-y border-border bg-muted/50 py-16 lg:py-24">
-          <div data-aos="fade-right" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
                 <p className="text-sm font-medium uppercase tracking-widest text-accent">
@@ -267,7 +267,7 @@ export default function ExcellencePage() {
 
         {/* Academic Practices */}
         <section className="py-16 lg:py-24">
-          <div data-aos="fade-left" className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div data-aos="fade-up" className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Approach
