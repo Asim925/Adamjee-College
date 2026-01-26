@@ -100,7 +100,7 @@ const seccapCutoff = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
+    <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
         {/* Hero Section */}
@@ -289,7 +289,7 @@ export default function HomePage() {
             <h2 className="mt-2 font-serif sm:text-3xl font-bold tracking-tight text-foreground text-2xl">
               SECCAP Cutoffs
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg p-4 text-muted-foreground">
               The following cutoff data shows the minimum qualifying marks out
               of 550 for the last three academic years.
             </p>
