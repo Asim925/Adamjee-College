@@ -87,6 +87,55 @@ const values = [
   },
 ];
 
+const gallery = [
+  { image: "/2.webp", title: "Principal" },
+  { image: "/1.webp", title: "Teaching Staff" },
+  { image: "/5.webp", title: "Non-Teaching Staff" },
+  { image: "/3.webp", title: "Staff Room Faculty" },
+  { image: "/4.webp", title: "Physics Department Faculty" },
+  { image: "/6.webp", title: "Mathematics Department Faculty" },
+  { image: "/7.webp", title: "Chemistry Department Faculty" },
+  { image: "/9.webp", title: "Urdu Department Faculty" },
+  { image: "/10.webp", title: "Bio-Chemsitry Department Faculty" },
+  { image: "/11.webp", title: "Botany Department Faculty" },
+  { image: "/12.webp", title: "English Department Faculty" },
+  { image: "/14.webp", title: "Discipline Committee" },
+  { image: "/16.webp", title: "Computer Science Department Faculty" },
+  { image: "/17.webp", title: "Pakistan Studies Department Faculty" },
+  { image: "/18.webp", title: "Islamic Studies Department Faculty" },
+  { image: "/20.webp", title: "Sindhi Department Faculty" },
+  { image: "/21.webp", title: "Zoology Department Faculty" },
+  { image: "/22.webp", title: "Admin Staff" },
+  { image: "/23.webp", title: "Library Staff" },
+  { image: "/24.webp", title: "Character Builiding Society (CBS)" },
+  { image: "/25.webp", title: "Building Maintenance Committee" },
+  { image: "/26.webp", title: "Magazine Committee" },
+  { image: "/27.webp", title: "Sports Society staff" },
+  { image: "/28.webp", title: "STEAM Club Members" },
+  { image: "/29.webp", title: "Admission Cell" },
+  { image: "/30.webp", title: "Examination Cell" },
+  {
+    image: "/Hafiz Dr. Abdulbari indhar.jpeg",
+    title: "Haifz Dr. Abdulbari Indhar (Ex-Principal)",
+  },
+  {
+    image: "/mushtaq ahmed meher.jpeg",
+    title: "Prof. Mushtaq Ahmed Meher (Ex-Principal)",
+  },
+  {
+    image: "/prof mustafa kamal.jpeg",
+    title: "Prof. Mustafa Kamal (Ex-Principal)",
+  },
+  {
+    image: "/prof rumina akhtar.jpeg",
+    title: "Prof. Rumina Akhtar (Ex-Principal)",
+  },
+  {
+    image: "/professor qamar m asif khan.jpeg",
+    title: "Prof. Kanwar M Asif Khan (Ex-Principal)",
+  },
+];
+
 export default function InstitutionPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -329,44 +378,92 @@ export default function InstitutionPage() {
           </div>
         </section>
 
-        {/* Leadership */}
-        <section id="leadership" className="py-16 lg:py-24">
-          <div data-aos="zoom-in" className="mx-auto max-w-7xl px-4 lg:px-8">
+        {/* Faculty Member's & Gallery */}
+        <section className="py-16 lg:py-24 bg-primary">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="text-sm font-medium uppercase tracking-widest text-accent">
-                Leadership
-              </p>
-              <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                College Administration
+              <h2 className="font-serif text-3xl font-bold text-accent sm:text-4xl">
+                Faculty Member's & Gallery
               </h2>
             </div>
 
-            <div className="mx-auto mt-12 max-w-md">
-              <Card className="overflow-hidden">
-                <div className="bg-accent/10 p-8 text-center">
-                  <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+            <div className="mt-12 grid gap-6 grid-cols-1 lg:grid-cols-2">
+              {gallery.map((item, index) => (
+                <Card key={index} className="overflow-hidden bg-muted">
+                  <div className="relative h-auto w-full aspect-video overflow-hidden">
                     <Image
-                      className="rounded-full"
-                      src="/principal.jpeg"
-                      alt="Principal"
-                      width={96}
-                      height={96}
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-contain"
                     />
                   </div>
+
+                  <CardContent className="py-4">
+                    <h3 className="font-medium text-foreground text-center">
+                      {item.title}
+                    </h3>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24 border-t border-border bg-accent/10">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Principals of Adamjee Government Science College
+              </h2>
+              <p className="mt-3 text-accent">
+                A collective legacy of leadership and academic stewardship.
+              </p>
+            </div>
+
+            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              {/* Image */}
+              <div className="relative w-full h-180 overflow-hidden rounded-2xl">
+                <Image
+                  src="/principal list.jpeg"
+                  alt="Former and current principals of Adamjee College"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              {/* Text */}
+              <div>
+                <h3 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                  Leadership Through the Years
+                </h3>
+
+                <div className="mt-4 space-y-4 text-muted-foreground text-md leading-relaxed">
+                  <p>
+                    Since its establishment in 1961, Adamjee Government Science
+                    College has been guided by a succession of dedicated
+                    principals whose leadership played a central role in shaping
+                    the college&apos;s academic culture, discipline, and
+                    institutional identity. Each principal carried forward the
+                    responsibility of preserving high educational standards
+                    while responding to the evolving needs of students and
+                    society.
+                  </p>
+
+                  <p>
+                    Through firm administration and student-focused policies,
+                    they fostered a culture of responsibility, punctuality, and
+                    dedication that continues to define the college experience
+                    for students and faculty alike. The collective contributions
+                    of past and present principals have left a lasting impact on
+                    Adamjee Government Science College. Their leadership not
+                    only strengthened the institution&apos;s reputation for
+                    excellence in science education across Karachi, but also
+                    laid a solid foundation upon which generations of students
+                    have pursued higher education and professional success.
+                  </p>
                 </div>
-                <CardContent className="p-6 text-center">
-                  <h3 className="font-serif text-xl font-semibold text-foreground">
-                    Principal
-                  </h3>
-                  <p className="mt-1 text-sm text-foreground">
-                    Prof. Nasir Iqbal
-                  </p>
-                  <p className="mt-4 text-sm text-muted-foreground">
-                    Leading the institution with dedication to academic
-                    excellence and student development.
-                  </p>
-                </CardContent>
-              </Card>
+              </div>
             </div>
           </div>
         </section>

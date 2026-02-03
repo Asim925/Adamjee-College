@@ -28,8 +28,8 @@ import {
 } from "lucide-react";
 
 const stats = [
-  { label: "Students per year", value: "2,400+", icon: Users },
-  { label: "Departments", value: "3", icon: Building2 },
+  { label: "Students per year", value: "1,500+", icon: Users },
+  { label: "Faculty", value: "3", icon: Building2 },
   { label: "Location", value: "Karachi", icon: MapPin },
   { label: "Since", value: "1961", icon: GraduationCap },
 ];
