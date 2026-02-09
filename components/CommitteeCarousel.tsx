@@ -36,13 +36,13 @@ const committee = [
 export function CommitteeCarousel() {
   return (
     <Carousel
-      plugins={[Autoplay({ delay: 2500, stopOnInteraction: false })] as any}
+      plugins={[Autoplay({ delay: 2000, stopOnInteraction: false })] as any}
       opts={{ align: "start", loop: true }}
       className="w-full max-w-6xl mx-auto my-4"
     >
       <CarouselContent className="flex items-center">
         {committee.map((item, index) => (
-          <CarouselItem key={index} className="basis-1/2">
+          <CarouselItem key={index} className="sm:basis-1/2">
             <div className="rounded-xl overflow-hidden bg-muted">
               <Image
                 src={item.image}
