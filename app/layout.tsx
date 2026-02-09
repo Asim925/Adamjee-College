@@ -12,7 +12,7 @@ const _sourceSerif = Source_Serif_4({
 const _inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Adamjee Govt. Science College",
+  title: "Adamjee Govt. Science College, Karachi",
   description:
     "A premier government science college in Karachi, Pakistan. Established 1961. Offering Pre-Medical, Pre-Engineering, and Computer Science programs.",
   keywords: [
