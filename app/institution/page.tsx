@@ -10,6 +10,9 @@ import {
   GraduationCap,
 } from "lucide-react";
 import Image from "next/image";
+import { PrincipalsCarousel } from "@/components/PrincipalsCarousel";
+import { StaffCarousel } from "@/components/StaffCarousel";
+import { CommitteeCarousel } from "@/components/CommitteeCarousel";
 
 const timeline = [
   {
@@ -84,55 +87,6 @@ const values = [
     title: "Merit-Based Excellence",
     description: "Recognizing and nurturing talent through fair assessment",
     icon: Award,
-  },
-];
-
-const gallery = [
-  { image: "/2.webp", title: "Principal" },
-  { image: "/1.webp", title: "Teaching Staff" },
-  { image: "/5.webp", title: "Non-Teaching Staff" },
-  { image: "/3.webp", title: "Staff Room Faculty" },
-  { image: "/4.webp", title: "Physics Department Faculty" },
-  { image: "/6.webp", title: "Mathematics Department Faculty" },
-  { image: "/7.webp", title: "Chemistry Department Faculty" },
-  { image: "/9.webp", title: "Urdu Department Faculty" },
-  { image: "/10.webp", title: "Bio-Chemsitry Department Faculty" },
-  { image: "/11.webp", title: "Botany Department Faculty" },
-  { image: "/12.webp", title: "English Department Faculty" },
-  { image: "/14.webp", title: "Discipline Committee" },
-  { image: "/16.webp", title: "Computer Science Department Faculty" },
-  { image: "/17.webp", title: "Pakistan Studies Department Faculty" },
-  { image: "/18.webp", title: "Islamic Studies Department Faculty" },
-  { image: "/20.webp", title: "Sindhi Department Faculty" },
-  { image: "/21.webp", title: "Zoology Department Faculty" },
-  { image: "/22.webp", title: "Admin Staff" },
-  { image: "/23.webp", title: "Library Staff" },
-  { image: "/24.webp", title: "Character Builiding Society (CBS)" },
-  { image: "/25.webp", title: "Building Maintenance Committee" },
-  { image: "/26.webp", title: "Magazine Committee" },
-  { image: "/27.webp", title: "Sports Society staff" },
-  { image: "/28.webp", title: "STEAM Club Members" },
-  { image: "/29.webp", title: "Admission Cell" },
-  { image: "/30.webp", title: "Examination Cell" },
-  {
-    image: "/Hafiz Dr. Abdulbari indhar.jpeg",
-    title: "Haifz Dr. Abdulbari Indhar (Ex-Principal)",
-  },
-  {
-    image: "/mushtaq ahmed meher.jpeg",
-    title: "Prof. Mushtaq Ahmed Meher (Ex-Principal)",
-  },
-  {
-    image: "/prof mustafa kamal.jpeg",
-    title: "Prof. Mustafa Kamal (Ex-Principal)",
-  },
-  {
-    image: "/prof rumina akhtar.jpeg",
-    title: "Prof. Rumina Akhtar (Ex-Principal)",
-  },
-  {
-    image: "/professor qamar m asif khan.jpeg",
-    title: "Prof. Kanwar M Asif Khan (Ex-Principal)",
   },
 ];
 
@@ -378,35 +332,20 @@ export default function InstitutionPage() {
           </div>
         </section>
 
-        {/* Faculty Member's & Gallery */}
+        {/* principals */}
         <section className="py-16 lg:py-24 bg-primary">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-serif text-3xl font-bold text-accent sm:text-4xl">
-                Faculty Member's & Gallery
+            <div className="mx-auto max-w-2xl mb-10 text-center">
+              <h2 className="font-serif text-3xl font-bold text-primary-foreground sm:text-4xl">
+                Principals of Adamjee Government Science College
               </h2>
+              <p className="mt-3 text-accent">
+                Present and former principals who shaped the college&apos;s
+                academic legacy.
+              </p>
             </div>
 
-            <div className="mt-12 grid gap-6 grid-cols-1 lg:grid-cols-2">
-              {gallery.map((item, index) => (
-                <Card key={index} className="overflow-hidden bg-muted">
-                  <div className="relative h-auto w-full aspect-video overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-
-                  <CardContent className="py-4">
-                    <h3 className="font-medium text-foreground text-center">
-                      {item.title}
-                    </h3>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <PrincipalsCarousel />
           </div>
         </section>
 
@@ -414,18 +353,18 @@ export default function InstitutionPage() {
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Principals of Adamjee Government Science College
+                Former Principals
               </h2>
               <p className="mt-3 text-accent">
                 A collective legacy of leadership and academic stewardship.
               </p>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="mt-2 sm:mt-10 md:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               {/* Image */}
               <div className="relative w-full h-180 overflow-hidden rounded-2xl">
                 <Image
-                  src="/principal list.jpeg"
+                  src="/principals/principal list.jpeg"
                   alt="Former and current principals of Adamjee College"
                   fill
                   className="object-contain"
@@ -465,6 +404,37 @@ export default function InstitutionPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24 bg-primary">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="mx-auto max-w-2xl mb-10 text-center">
+              <h2 className="font-serif text-3xl font-bold text-primary-foreground sm:text-4xl">
+                Staff of Adamjee Government Science College
+              </h2>
+              <p className="mt-3 text-accent">
+                staff members who contribute to the college&apos;s academic and
+                extracurricular excellence.
+              </p>
+            </div>
+
+            <StaffCarousel />
+          </div>
+        </section>
+        <section className="py-16 lg:py-24 bg-secondary">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="mx-auto max-w-2xl mb-10 text-center">
+              <h2 className="font-serif text-3xl font-bold text-secondary-foreground sm:text-4xl">
+                Committees of Adamjee Government Science College
+              </h2>
+              <p className="mt-3 text-accent">
+                Committee members who contributed to the college&apos;s academic
+                and extracurricular excellence.
+              </p>
+            </div>
+
+            <CommitteeCarousel />
           </div>
         </section>
       </main>

@@ -93,9 +93,16 @@ export function SiteFooter() {
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8">
           <p className="text-center text-xs text-primary-foreground/60">
-            © 2026 | Built with{" "}
-            <span className="font-medium text-white/80">M.Asim Nazeer</span>, a
-            proud student of Adamjee Govt. Science College
+            © 2026 | Designed & Developed by{" "}
+            <Link
+              href="https://www.linkedin.com/in/muhammad-asim-nazeer-b30b7a2a4/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary-foreground hover:underline underline-offset-4"
+            >
+              M. Asim Nazeer
+            </Link>
+            , a proud student of Adamjee Govt. Science College
           </p>
         </div>
       </div>

@@ -26,6 +26,8 @@ import {
   Facebook,
   Linkedin,
 } from "lucide-react";
+import { Carousel } from "@/components/ui/carousel";
+import { GalleryCarousel } from "@/components/PrincipalsCarousel";
 
 const stats = [
   { label: "Students per year", value: "1,500+", icon: Users },
@@ -106,7 +108,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-24 lg:py-32">
           <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
-            <div data-aos="fade-up" className="mx-auto max-w-3xl text-center">
+            <div data-aos="fade-down" className="mx-auto max-w-3xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-accent">
                 Established 1961
               </p>
@@ -293,41 +295,50 @@ export default function HomePage() {
               The following cutoff data shows the minimum qualifying marks out
               of 550 for the last three academic years.
             </p>
-            <table className="mt-6 mx-4 sm:w-full sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto text-xs sm:text-sm">
+            <table className="mt-6 mx-4 sm:w-full sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto text-xs sm:text-sm border border-border rounded-lg overflow-hidden">
               <thead>
-                <tr className="bg-red-600 text-white">
+                <tr className="bg-primary/90 text-primary-foreground">
                   {[
                     "Department",
                     new Date().getFullYear(),
                     new Date().getFullYear() - 1,
                     new Date().getFullYear() - 2,
                   ].map((header, index) => (
-                    <th key={index} className="border sm:px-4 py-2">
+                    <th
+                      key={index}
+                      className="border border-border px-2 sm:px-4 py-3 font-medium text-center"
+                    >
                       {header}
                     </th>
                   ))}
                 </tr>
               </thead>
+
               <tbody>
                 {seccapCutoff.map((item, index) => (
                   <tr
                     key={index}
-                    className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
+                    className={
+                      index % 2 === 0 ? "bg-background" : "bg-muted/60"
+                    }
                   >
-                    <td className="border px-1 sm:px-4 py-2">
+                    <td className="border border-border px-2 sm:px-4 py-2 font-medium text-foreground">
                       {item.department}
                     </td>
-                    <td className="border px-1 sm:px-4 py-2">
-                      <p>{item.one[0]}</p>
-                      <p className="text-black/50">{item.one[1]}</p>
+
+                    <td className="border border-border px-2 sm:px-4 py-2 text-center">
+                      <p className="text-foreground">{item.one[0]}</p>
+                      <p className="text-muted-foreground">{item.one[1]}</p>
                     </td>
-                    <td className="border px-1 sm:px-4 py-2">
-                      <p>{item.two[0]}</p>
-                      <p className="text-black/50">{item.two[1]}</p>
+
+                    <td className="border border-border px-2 sm:px-4 py-2 text-center">
+                      <p className="text-foreground">{item.two[0]}</p>
+                      <p className="text-muted-foreground">{item.two[1]}</p>
                     </td>
-                    <td className="border px-1 sm:px-4 py-2">
-                      <p>{item.three[0]}</p>
-                      <p className="text-black/50">{item.three[1]}</p>
+
+                    <td className="border border-border px-2 sm:px-4 py-2 text-center">
+                      <p className="text-foreground">{item.three[0]}</p>
+                      <p className="text-muted-foreground">{item.three[1]}</p>
                     </td>
                   </tr>
                 ))}
@@ -411,7 +422,6 @@ export default function HomePage() {
                 "/proud2.jpg",
                 "/proud1.jpg",
                 "/proud4.jpg",
-
                 "/proud6.jpg",
                 "/proud7.jpg",
               ].map((image, index) => (
